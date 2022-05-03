@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+        - requests
+      </py-env>
+    </head>
+
+  <body>
+    <div id="out"></div>
+    <py-script output="out">
+import requests
+# Errors:
+# HTTPConnectionPool(host='10.0.0.77', port=80): Max retries exceeded with url: /test (Caused by NewConnectionError(': Failed to establish a new connection: [Errno 50] Protocol not available')) )
+# r = requests.get("http://10.0.0.77/test")
+
+# Errors:
+# HTTPConnectionPool(host='10.0.0.77', port=80): Max retries exceeded with url: /test (Caused by NewConnectionError(': Failed to establish a new connection: [Errno 50] Protocol not available')) )
+# r = requests.get("http://10.0.0.77/test")
+    </py-script>
+  </body>
+</html>

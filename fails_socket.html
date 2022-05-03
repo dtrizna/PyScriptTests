@@ -1,0 +1,43 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+
+  <body>
+    <div id="output"></div>
+    <py-script output="output">
+import socket
+print("hey 1")
+
+HOST = '10.0.0.77'
+PORT = 4242
+
+# makes a WebSocket request before actually making a socket connection
+"""
+Request URL: ws://10.0.0.77/
+
+GET / HTTP/1.1
+Host: 10.0.0.77
+Connection: Upgrade
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+Upgrade: websocket
+Origin: null
+Sec-WebSocket-Version: 13
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,lv-LV;q=0.8,lv;q=0.7,ru-RU;q=0.6,ru;q=0.5,zh-CN;q=0.4,zh;q=0.3,cs;q=0.2
+Sec-WebSocket-Key: awlcIwffIa4pJeOLZjyZTQ==
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+Sec-WebSocket-Protocol: binary
+"""
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((HOST, PORT))
+s.send(str.encode("[*] Connection Established!"))
+s.close()
+
+print("hey 2")
+    </py-script>
+  </body>
+</html>

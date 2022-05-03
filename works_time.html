@@ -1,0 +1,15 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+
+  <body>
+    <div id="output"></div>
+    <py-script output="output">
+import time
+now = time.time()
+print(f"took: {time.time() - now:.2f}s")
+    </py-script>
+  </body>
+</html>
